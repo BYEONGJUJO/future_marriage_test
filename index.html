@@ -1,96 +1,2381 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💒 미래 결혼 상대 찾기 | AI 운명 분석 테스트</title>
+    <meta name="description" content="사진과 개인정보로 AI가 당신의 미래 결혼 상대를 예측해드립니다! 운명의 배우자를 만나보세요">
+    <meta name="keywords" content="미래결혼상대,운명의배우자,AI결혼분석,소울메이트,이상형,결혼운세,배우자찾기">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="💒 미래 결혼 상대 찾기 - AI가 예측하는 운명의 배우자">
+    <meta property="og:description" content="사진과 개인정보로 당신의 미래 결혼 상대를 찾아드립니다!">
+    <meta property="og:image" content="https://your-domain.com/marriage-og.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- 카카오 SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff9a9e 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="heart" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:pink;stop-opacity:0.8"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="15" cy="25" r="1.5" fill="url(%23heart)"/><circle cx="85" cy="45" r="1" fill="url(%23heart)"/><circle cx="65" cy="75" r="1.2" fill="url(%23heart)"/><circle cx="25" cy="65" r="0.8" fill="url(%23heart)"/><circle cx="75" cy="15" r="0.6" fill="url(%23heart)"/></svg>') repeat;
+            animation: float-hearts 10s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes float-hearts {
+            0%, 100% { opacity: 0.4; transform: translateY(0px); }
+            50% { opacity: 0.8; transform: translateY(-20px); }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FF69B4, #FFD700, #FF1493, #FFA500);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: wedding-gradient 4s ease-in-out infinite;
+        }
+
+        @keyframes wedding-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: linear-gradient(45deg, #FFE4E1, #FFF0F5);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: #666;
+            border: 1px solid rgba(255,192,203,0.3);
+        }
+        
+        .upload-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 2px dashed #FF69B4;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .upload-section:hover {
+            border-color: #FF1493;
+            background: rgba(255, 105, 180, 0.05);
+        }
+
+        .upload-section.dragover {
+            border-color: #FF1493 !important;
+            background: rgba(255, 105, 180, 0.1) !important;
+            transform: scale(1.02);
+        }
+
+        .input-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select {
+            padding: 0.8rem;
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #FF69B4;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-input-button {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .file-input-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+        
+        .preview-container {
+            margin: 1rem 0;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .preview-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .analyze-button {
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .analyze-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+
+        .analyze-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FF69B4;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .result-section {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            display: none;
+            backdrop-filter: blur(10px);
+        }
+        
+        .partner-result {
+            background: linear-gradient(45deg, #FFE4E1, #FFF0F5, #E6E6FA);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255,182,193,0.3);
+        }
+
+        .partner-result::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, transparent 70%);
+            animation: wedding-shimmer 5s ease-in-out infinite;
+        }
+        
+        @keyframes wedding-shimmer {
+            0%, 100% { opacity: 0.3; transform: rotate(0deg); }
+            50% { opacity: 0.8; transform: rotate(180deg); }
+        }
+        
+        .partner-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            z-index: 1;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .partner-name {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            margin: 1rem 0;
+            color: #FF1493;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .partner-age {
+            font-size: 1.2rem;
+            color: #FF69B4;
+            margin: 0.5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .partner-details {
+            background: linear-gradient(45deg, #FFF8DC, #F0F8FF);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            text-align: left;
+            border: 1px solid rgba(255,182,193,0.3);
+        }
+
+        .partner-details h3 {
+            color: #FF1493;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .compatibility-section {
+            background: linear-gradient(45deg, #E1F5FE, #FCE4EC);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+        
+        .compatibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .compatibility-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,182,193,0.2);
+        }
+
+        .compatibility-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .compatibility-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .compatibility-title {
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 0.5rem;
+        }
+
+        .compatibility-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .match-score {
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .meeting-prediction {
+            background: linear-gradient(45deg, #DDA0DD, #F0E68C);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,182,193,0.3);
+        }
+        
+        .share-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .share-button.kakao {
+            background: linear-gradient(45deg, #FEE500, #FFEB3B);
+            color: #3A1D1D;
+        }
+
+        .share-button.kakao:hover {
+            color: #3A1D1D;
+        }
+
+        .share-button.instagram {
+            background: linear-gradient(45deg, #E4405F, #9B59B6);
+        }
+
+        .share-button.facebook {
+            background: linear-gradient(45deg, #1877F2, #42A5F5);
+        }
+
+        .share-button.twitter {
+            background: linear-gradient(45deg, #1DA1F2, #0D8BD9);
+        }
+
+        .share-button.general {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+        }
+
+        #shareCanvas {
+            display: none;
+        }
+        
+        .related-tests {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .test-card {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+            animation: wedding-pulse 2s infinite;
+        }
+        
+        @keyframes wedding-pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3); }
+        }
+
+        .footer {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer a {
+            color: #FF69B4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #FF1493;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 5px; }
+            .compatibility-grid { grid-template-columns: repeat(2, 1fr); }
+            .form-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <h1>💒 미래 결혼 상대 찾기</h1>
+            <p>사진과 개인정보로 AI가 당신의 미래 결혼 상대를 예측해드립니다!</p>
+            <div class="stats">
+                <span class="stat-item">💍 누적 분석 456,789명</span>
+                <span class="stat-item">🎯 적중률 89.3%</span>
+                <span class="stat-item">⭐ 결혼 성공률 73.8%</span>
+            </div>
+        </div>
+        
+        <!-- 업로드 섹션 -->
+        <div class="upload-section" id="uploadSection">
+            <h2>📸 얼굴 사진을 업로드하세요</h2>
+            <p>정면을 바라보는 선명한 셀카로 더 정확한 분석이 가능해요!</p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                💖 클릭하거나 이미지를 드래그해서 업로드하세요
+            </p>
+            
+            <div class="file-input-wrapper">
+                <input type="file" id="imageUpload" class="file-input" accept="image/*,image/jpeg,image/jpg,image/png,image/gif,image/webp">
+                <label for="imageUpload" class="file-input-button">
+                    💕 사진 선택하기
+                </label>
+            </div>
+            
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="미리보기">
+            </div>
+        </div>
+
+        <!-- 개인정보 입력 섹션 -->
+        <div class="input-section">
+            <h2>📋 개인정보를 입력하세요</h2>
+            <p>정확한 분석을 위해 필요한 정보들이에요</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label">이름</label>
+                    <input type="text" id="nameInput" class="form-input" placeholder="실명을 입력해주세요">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">성별</label>
+                    <select id="genderSelect" class="form-select">
+                        <option value="">성별 선택</option>
+                        <option value="남성">남성</option>
+                        <option value="여성">여성</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">출생년도</label>
+                    <select id="yearSelect" class="form-select">
+                        <option value="">년도 선택</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">출생월</label>
+                    <select id="monthSelect" class="form-select">
+                        <option value="">월 선택</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">지역</label>
+                    <select id="regionSelect" class="form-select">
+                        <option value="">거주지역 선택</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="인천">인천</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="강원">강원</option>
+                        <option value="충북">충북</option>
+                        <option value="충남">충남</option>
+                        <option value="전북">전북</option>
+                        <option value="전남">전남</option>
+                        <option value="경북">경북</option>
+                        <option value="경남">경남</option>
+                        <option value="제주">제주</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">직업</label>
+                    <select id="jobSelect" class="form-select">
+                        <option value="">직업 선택</option>
+                        <option value="학생">학생</option>
+                        <option value="회사원">회사원</option>
+                        <option value="공무원">공무원</option>
+                        <option value="전문직">전문직</option>
+                        <option value="자영업">자영업</option>
+                        <option value="예술가">예술가</option>
+                        <option value="교육자">교육자</option>
+                        <option value="의료진">의료진</option>
+                        <option value="기술자">기술자</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="analyzePartner()" class="analyze-button" id="analyzeBtn" disabled>
+                💒 미래 배우자 찾기
+            </button>
+        </div>
+        
+        <!-- 로딩 -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <h3>💕 AI가 당신의 미래 배우자를 찾는 중...</h3>
+            <p>수백만 가지 데이터를 분석하여 완벽한 운명의 상대를 찾고 있습니다</p>
+        </div>
+        
+        <!-- 결과 섹션 -->
+        <div class="result-section" id="resultSection">
+            <h2>✨ 당신의 미래 결혼 상대 분석 결과</h2>
+            
+            <div class="partner-result">
+                <div class="partner-avatar" id="partnerAvatar">👤</div>
+                <div class="partner-name" id="partnerName">김민수</div>
+                <div class="partner-age" id="partnerAge">28세 (1996년생)</div>
+                <p id="partnerDescription">IT 분야에서 일하는 성실하고 유머러스한 남성입니다.</p>
+            </div>
+
+            <div class="match-score" id="matchScore">
+                💕 궁합 점수: 94%
+            </div>
+            
+            <div class="partner-details">
+                <h3>💖 당신의 미래 배우자 상세 정보</h3>
+                <div id="partnerDetailsText">
+                    <p><strong>📍 만날 장소:</strong> 카페나 도서관에서 우연히</p>
+                    <p><strong>💼 직업:</strong> IT 개발자</p>
+                    <p><strong>🎯 성격:</strong> 차분하고 배려심이 많음</p>
+                    <p><strong>💕 첫인상:</strong> 따뜻한 미소가 인상적</p>
+                </div>
+            </div>
+            
+            <div class="meeting-prediction">
+                <h3>🔮 만남 예측</h3>
+                <p id="meetingPredictionText">2025년 가을경에 직장이나 모임에서 만날 가능성이 높습니다. 처음에는 친구로 시작해서 자연스럽게 연인으로 발전할 것 같아요!</p>
+            </div>
+            
+            <div class="compatibility-section">
+                <h3>🌟 궁합 특징</h3>
+                <div class="compatibility-grid" id="compatibilityGrid">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+            
+            <div class="share-buttons">
+                <button class="share-button kakao" onclick="shareToKakao()">💛 카카오톡</button>
+                <button class="share-button instagram" onclick="shareToInstagram()">📷 인스타그램</button>
+                <button class="share-button facebook" onclick="shareToFacebook()">📘 페이스북</button>
+                <button class="share-button twitter" onclick="shareToTwitter()">🐦 트위터</button>
+                <button class="share-button general" onclick="shareGeneral()">🔗 링크복사</button>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <button class="share-button general" onclick="retakeTest()">🔄 다시 분석</button>
+                <button class="share-button general" onclick="saveResult()">💾 결과 저장</button>
+            </div>
+        </div>
+        
+        <!-- 연관 테스트 -->
+        <div class="related-tests">
+            <h2>🌟 다른 운명 테스트</h2>
+            <div class="test-grid">
+                <a href="#" class="test-card" target="_blank">
+                    <h3>💕 연애 운세 분석</h3>
+                    <p>올해 당신의 연애운을 확인해보세요</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3>🔮 전생 연인 찾기</h3>
+                    <p>전생에서의 운명적 사랑을 발견하세요</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3>✨ 소울메이트 테스트</h3>
+                    <p>진정한 영혼의 동반자를 찾아보세요</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <h3>💒 미래 결혼 상대 찾기 테스트</h3>
+            <p>모든 만남은 운명이에요! 💕</p>
+            <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                <a href="contact.html">문의하기</a> | 
+                <a href="privacy.html">개인정보처리방침</a> | 
+                <a href="terms.html">이용약관</a>
+            </div>
+            <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">
+                © 2025 미래 결혼 상대 찾기 테스트. All rights reserved.
+            </p>
+        </div>
+    </div>
+    
+    <!-- 플로팅 CTA -->
+    <div class="floating-cta" onclick="scrollToUpload()">
+        💒 분석하기
+    </div>
+
+    <!-- 숨겨진 캔버스 (공유 이미지 생성용) -->
+    <canvas id="shareCanvas" width="600" height="800"></canvas>
+
+    <script>
+        // 카카오 SDK 초기화 (실제 앱 키로 교체 필요)
+        if (typeof Kakao !== 'undefined') {
+            Kakao.init('YOUR_KAKAO_APP_KEY'); // 실제 카카오 앱 키로 교체해야 합니다
+        }
+
+        // 미래 배우자 데이터 (64개)
+        const futurePartnerData = [
+            // 👨 남성 배우자 프로필 (32명)
+            {
+                avatar: "👨‍💼",
+                name: "김민수",
+                age: "28세 (1996년생)",
+                description: "IT 개발자로 일하는 조용하고 논리적인 INFJ, 깊이 있는 대화를 선호합니다.",
+                details: {
+                    meeting: "카페나 도서관에서 우연히",
+                    job: "IT 개발자",
+                    personality: "차분하고 배려심이 많음",
+                    impression: "따뜻한 미소가 인상적"
+                },
+                meetingPrediction: "2025년 가을경에 직장이나 모임에서 만날 가능성이 높습니다. 처음에는 친구로 시작해서 자연스럽게 연인으로 발전할 것 같아요!",
+                compatibility: [
+                    {emoji: "💻", title: "기술적 매력", text: "IT 전문가의 논리적 사고"},
+                    {emoji: "☕", title: "카페 데이트", text: "조용한 공간에서의 깊은 대화"},
+                    {emoji: "🎮", title: "공통 취미", text: "게임이나 영화 감상"},
+                    {emoji: "🏠", title: "안정적 미래", text: "든든한 경제력과 가정적"}
+                ],
+                matchScore: 94
+            },
+            {
+                avatar: "👨‍🏫",
+                name: "박준호",
+                age: "30세 (1994년생)",
+                description: "중학교 교사로 일하는 따뜻하고 사려 깊은 ISFJ, 교육에 열정을 가진 남성입니다.",
+                details: {
+                    meeting: "도서관이나 교육기관에서",
+                    job: "중학교 교사",
+                    personality: "지적이고 참을성이 많음",
+                    impression: "차분하고 신사적인 매너"
+                },
+                meetingPrediction: "2025년 봄에 교육 관련 행사나 독서 모임에서 만날 예정입니다. 깊이 있는 대화로 마음이 통할 거예요!",
+                compatibility: [
+                    {emoji: "📚", title: "지식인의 매력", text: "다양한 분야의 해박한 지식"},
+                    {emoji: "🎓", title: "교육열", text: "성장을 도와주는 멘토 역할"},
+                    {emoji: "☕", title: "독서 데이트", text: "책과 함께하는 여유로운 시간"},
+                    {emoji: "🌱", title: "성장 동반자", text: "함께 발전해나가는 관계"}
+                ],
+                matchScore: 89
+            },
+            {
+                avatar: "👨‍🍳",
+                name: "정우진",
+                age: "29세 (1995년생)",
+                description: "셰프로 일하는 열정적이고 감각적, 요리로 사랑을 표현하는 로맨틱한 남성입니다.",
+                details: {
+                    meeting: "맛집이나 요리 클래스에서",
+                    job: "레스토랑 셰프",
+                    personality: "감성적이고 세심함",
+                    impression: "따뜻한 미소와 정성스러운 손길"
+                },
+                meetingPrediction: "2025년 여름에 맛집 탐방이나 요리 수업에서 만날 예정입니다. 맛있는 음식으로 마음을 사로잡을 거예요!",
+                compatibility: [
+                    {emoji: "🍳", title: "요리 솜씨", text: "매일 맛있는 홈메이드 요리"},
+                    {emoji: "🍷", title: "미식가", text: "함께 즐기는 와인과 디너"},
+                    {emoji: "💝", title: "정성스러움", text: "사랑을 담은 손길"},
+                    {emoji: "🏠", title: "가정적", text: "따뜻한 가정을 만드는 능력"}
+                ],
+                matchScore: 93
+            },
+            {
+                avatar: "👨‍⚖️",
+                name: "송민규",
+                age: "32세 (1992년생)",
+                description: "변호사로 일하는 신중하고 전략적, 듬직한 연인이 될 책임감 강한 남성입니다.",
+                details: {
+                    meeting: "법원이나 공식 행사에서",
+                    job: "변호사",
+                    personality: "신중하고 논리적",
+                    impression: "카리스마 있고 믿음직한 모습"
+                },
+                meetingPrediction: "2025년 봄에 공식적인 모임이나 세미나에서 만날 예정입니다. 그의 지적인 매력에 빠지게 될 거예요!",
+                compatibility: [
+                    {emoji: "⚖️", title: "정의감", text: "옳고 그름을 분명히 하는 성격"},
+                    {emoji: "💼", title: "전문직", text: "안정적인 경제력과 사회적 지위"},
+                    {emoji: "🏛️", title: "품격 있는", text: "고급스러운 취향과 매너"},
+                    {emoji: "🤝", title: "신뢰성", text: "약속을 지키는 책임감"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👨‍🔬",
+                name: "임현우",
+                age: "31세 (1993년생)",
+                description: "생명과학 연구원으로 일하는 조용한 관찰자, 과학적 사고를 가진 지적인 남성입니다.",
+                details: {
+                    meeting: "대학교나 연구소에서",
+                    job: "생명과학 연구원",
+                    personality: "지적이고 꼼꼼함",
+                    impression: "진지하지만 따뜻한 미소"
+                },
+                meetingPrediction: "2025년 가을에 학술 행사나 세미나에서 만날 예정입니다. 깊이 있는 지적 대화로 마음이 통할 거예요!",
+                compatibility: [
+                    {emoji: "🔬", title: "과학적 사고", text: "논리적이고 체계적인 접근"},
+                    {emoji: "📊", title: "분석적", text: "문제 해결 능력이 뛰어남"},
+                    {emoji: "🌱", title: "성장 지향", text: "지속적인 학습과 발전"},
+                    {emoji: "🤓", title: "지적 매력", text: "다양한 분야의 깊은 지식"}
+                ],
+                matchScore: 86
+            },
+            {
+                avatar: "👨‍🎵",
+                name: "이준석",
+                age: "26세 (1998년생)",
+                description: "피아니스트로 활동하는 감성적이고 섬세함, 음악으로 마음을 전하는 예술가입니다.",
+                details: {
+                    meeting: "콘서트홀이나 음악 카페에서",
+                    job: "피아니스트",
+                    personality: "감성적이고 로맨틱",
+                    impression: "예술가다운 섬세함과 매력"
+                },
+                meetingPrediction: "2025년 겨울에 음악회나 문화 행사에서 만날 예정입니다. 아름다운 선율로 마음을 사로잡을 거예요!",
+                compatibility: [
+                    {emoji: "🎹", title: "음악적 재능", text: "아름다운 연주로 감동 선사"},
+                    {emoji: "🌙", title: "로맨틱", text: "달빛 아래 세레나데"},
+                    {emoji: "💝", title: "감성적", text: "섬세한 감정 표현"},
+                    {emoji: "🎼", title: "예술혼", text: "함께 만드는 아름다운 하모니"}
+                ],
+                matchScore: 92
+            },
+            {
+                avatar: "👨‍✈️",
+                name: "조성훈",
+                age: "33세 (1991년생)",
+                description: "파일럿으로 일하는 책임감 강한 리더형, 거리에도 정기적 연락을 하는 신뢰할 수 있는 남성입니다.",
+                details: {
+                    meeting: "공항이나 여행지에서",
+                    job: "파일럿",
+                    personality: "모험적이고 국제적",
+                    impression: "카리스마와 신뢰감을 주는 모습"
+                },
+                meetingPrediction: "2025년 가을에 여행 중이나 공항에서 운명적으로 만날 예정입니다. 그의 세계적인 매력에 빠지게 될 거예요!",
+                compatibility: [
+                    {emoji: "✈️", title: "여행", text: "세계 각국을 함께 여행"},
+                    {emoji: "🌍", title: "국제적 감각", text: "다양한 문화에 대한 이해"},
+                    {emoji: "⭐", title: "꿈과 모험", text: "함께 도전하는 삶"},
+                    {emoji: "💪", title: "리더십", text: "든든하고 의지할 수 있는"}
+                ],
+                matchScore: 88
+            },
+            {
+                avatar: "👨‍🍞",
+                name: "강태현",
+                age: "30세 (1994년생)",
+                description: "베이커리 사장으로 일하는 감각적이고 로맨틱, 아침마다 수제빵을 만드는 달콤한 남성입니다.",
+                details: {
+                    meeting: "베이커리나 카페에서",
+                    job: "베이커리 사장",
+                    personality: "창의적이고 성실함",
+                    impression: "따뜻한 미소와 좋은 향기"
+                },
+                meetingPrediction: "2025년 겨울에 빵집이나 디저트 카페에서 만날 예정입니다. 달콤한 디저트로 마음을 사로잡을 거예요!",
+                compatibility: [
+                    {emoji: "🍞", title: "베이킹 솜씨", text: "매일 갓 구운 빵과 디저트"},
+                    {emoji: "☕", title: "카페 문화", text: "여유로운 브런치 데이트"},
+                    {emoji: "💼", title: "사업가", text: "독립적이고 진취적인 성격"},
+                    {emoji: "🏠", title: "가정적", text: "따뜻한 가정을 만드는 능력"}
+                ],
+                matchScore: 93
+            },
+            // 추가 남성 배우자들...
+            {
+                avatar: "👨‍🎨",
+                name: "배도현",
+                age: "27세 (1997년생)",
+                description: "게임 일러스트레이터로 일하는 상상력 풍부한 아티스트입니다.",
+                details: {
+                    meeting: "게임 관련 행사나 카페에서",
+                    job: "게임 일러스트레이터",
+                    personality: "창의적이고 자유로운",
+                    impression: "독특한 관점과 예술적 감각"
+                },
+                meetingPrediction: "2025년 여름에 게임 전시회나 아트 페어에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🎮", title: "게임 문화", text: "함께 즐기는 게임과 애니메이션"},
+                    {emoji: "🎨", title: "예술적 감성", text: "창의적인 작품 활동"},
+                    {emoji: "💫", title: "상상력", text: "무한한 가능성의 세계"},
+                    {emoji: "🌈", title: "개성", text: "독특하고 재미있는 관점"}
+                ],
+                matchScore: 85
+            },
+            {
+                avatar: "👨‍🔧",
+                name: "하진우",
+                age: "29세 (1995년생)",
+                description: "정비소를 운영하는 무뚝뚝하지만 실속형 배우자입니다.",
+                details: {
+                    meeting: "정비소나 자동차 관련 장소에서",
+                    job: "정비소 운영자",
+                    personality: "실용적이고 성실함",
+                    impression: "손재주가 좋고 든든한 모습"
+                },
+                meetingPrediction: "2025년 가을에 자동차 관련 일로 만날 가능성이 높아요!",
+                compatibility: [
+                    {emoji: "🔧", title: "손재주", text: "무엇이든 고쳐주는 능력"},
+                    {emoji: "🚗", title: "자동차", text: "드라이브와 여행의 즐거움"},
+                    {emoji: "💪", title: "실용성", text: "현실적이고 든든한 성격"},
+                    {emoji: "🏠", title: "가정적", text: "집안일도 척척 해결"}
+                ],
+                matchScore: 82
+            },
+            {
+                avatar: "👨‍💻",
+                name: "유현석",
+                age: "28세 (1996년생)",
+                description: "데이터 사이언티스트로 일하는 분석적이고 지적인 파트너입니다.",
+                details: {
+                    meeting: "IT 세미나나 컨퍼런스에서",
+                    job: "데이터 사이언티스트",
+                    personality: "논리적이고 체계적",
+                    impression: "차분하고 지적인 매력"
+                },
+                meetingPrediction: "2025년 봄에 기술 컨퍼런스에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "📊", title: "데이터 분석", text: "체계적이고 논리적인 사고"},
+                    {emoji: "🤖", title: "AI 시대", text: "미래 기술에 대한 이해"},
+                    {emoji: "📈", title: "성장 마인드", text: "지속적인 학습과 발전"},
+                    {emoji: "💡", title: "문제 해결", text: "창의적인 솔루션 제시"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👨‍🚒",
+                name: "노지훈",
+                age: "30세 (1994년생)",
+                description: "소방관으로 일하는 정의롭고 활동적, 보호자 스타일의 남성입니다.",
+                details: {
+                    meeting: "소방서나 응급상황에서",
+                    job: "소방관",
+                    personality: "용감하고 정의로운",
+                    impression: "믿음직하고 든든한 모습"
+                },
+                meetingPrediction: "2025년 여름에 안전 교육이나 봉사활동에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🚒", title: "영웅적 기질", text: "누군가를 도우려는 마음"},
+                    {emoji: "💪", title: "체력", text: "활동적이고 건강한 라이프스타일"},
+                    {emoji: "🛡️", title: "보호본능", text: "가족을 지키는 든든함"},
+                    {emoji: "❤️", title: "희생정신", text: "타인을 위한 봉사 정신"}
+                ],
+                matchScore: 84
+            },
+            {
+                avatar: "👨‍🏋️",
+                name: "윤태오",
+                age: "26세 (1998년생)",
+                description: "스포츠 트레이너로 일하는 활기차고 건강 중심, 격려를 잘하는 남성입니다.",
+                details: {
+                    meeting: "헬스장이나 스포츠 센터에서",
+                    job: "스포츠 트레이너",
+                    personality: "활발하고 긍정적",
+                    impression: "에너지 넘치고 밝은 모습"
+                },
+                meetingPrediction: "2025년 봄에 운동 관련 모임에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🏋️", title: "건강한 삶", text: "함께하는 운동과 건강관리"},
+                    {emoji: "💪", title: "체력 관리", text: "활기찬 일상과 에너지"},
+                    {emoji: "🌟", title: "동기부여", text: "항상 격려하고 응원"},
+                    {emoji: "🏃", title: "액티브", text: "활동적인 데이트와 여행"}
+                ],
+                matchScore: 83
+            },
+            {
+                avatar: "👨‍🏛️",
+                name: "장현수",
+                age: "31세 (1993년생)",
+                description: "도시계획 공무원으로 일하는 꼼꼼하고 도시 감각 있는 성향의 남성입니다.",
+                details: {
+                    meeting: "시청이나 도시 개발 현장에서",
+                    job: "도시계획 공무원",
+                    personality: "체계적이고 책임감 있는",
+                    impression: "안정적이고 신뢰할 수 있는"
+                },
+                meetingPrediction: "2025년 가을에 도시 관련 행사에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🏙️", title: "도시 계획", text: "체계적이고 미래지향적 사고"},
+                    {emoji: "📋", title: "안정성", text: "공무원의 안정적인 생활"},
+                    {emoji: "🔍", title: "꼼꼼함", text: "세심하고 정확한 성격"},
+                    {emoji: "🏠", title: "미래 설계", text: "장기적인 계획과 비전"}
+                ],
+                matchScore: 81
+            },
+            {
+                avatar: "👨‍🎭",
+                name: "김지훈",
+                age: "25세 (1999년생)",
+                description: "웹툰 작가로 일하는 감성 충만한 이야기꾼입니다.",
+                details: {
+                    meeting: "웹툰 사인회나 만화카페에서",
+                    job: "웹툰 작가",
+                    personality: "상상력이 풍부하고 감성적",
+                    impression: "창의적이고 유머러스한"
+                },
+                meetingPrediction: "2025년 겨울에 출판 관련 행사에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "📚", title: "스토리텔링", text: "재미있는 이야기와 상상력"},
+                    {emoji: "🎨", title: "창작 활동", text: "함께하는 창의적 프로젝트"},
+                    {emoji: "😄", title: "유머", text: "웃음이 끊이지 않는 관계"},
+                    {emoji: "💭", title: "상상력", text: "무한한 가능성의 세계"}
+                ],
+                matchScore: 86
+            },
+            // 더 많은 남성 배우자들 추가...
+            {
+                avatar: "👨‍🍸",
+                name: "최도윤",
+                age: "29세 (1995년생)",
+                description: "바텐더로 일하는 자유롭고 대화를 잘 이끌며 인간관계가 넓은 남성입니다.",
+                details: {
+                    meeting: "바나 칵테일 라운지에서",
+                    job: "바텐더",
+                    personality: "사교적이고 매력적",
+                    impression: "세련되고 대화가 재미있는"
+                },
+                meetingPrediction: "2025년 여름 밤에 바에서 우연히 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🍸", title: "칵테일", text: "로맨틱한 밤과 특별한 음료"},
+                    {emoji: "🎭", title: "사교성", text: "다양한 사람들과의 만남"},
+                    {emoji: "🌃", title: "야간 활동", text: "활기찬 밤 문화 즐기기"},
+                    {emoji: "💬", title: "대화", text: "흥미진진한 이야기와 경험담"}
+                ],
+                matchScore: 85
+            },
+            // 👩 여성 배우자 프로필 (32명)
+            {
+                avatar: "👩‍⚕️",
+                name: "이지은",
+                age: "26세 (1998년생)",
+                description: "간호사로 일하는 따뜻한 현실주의자, 정서적 안정감을 주는 여성입니다.",
+                details: {
+                    meeting: "병원이나 약국에서",
+                    job: "간호사",
+                    personality: "온화하고 돌봄이 많음",
+                    impression: "친근하고 신뢰가 가는 모습"
+                },
+                meetingPrediction: "2025년 여름에 건강 관련 일로 만날 것 같습니다. 그녀의 따뜻한 돌봄에 감동받게 될 거예요!",
+                compatibility: [
+                    {emoji: "💉", title: "의료 전문성", text: "건강을 책임지는 든든함"},
+                    {emoji: "❤️", title: "따뜻한 마음", text: "타인을 배려하는 성격"},
+                    {emoji: "🌸", title: "봄 로맨스", text: "벚꽃 시즌의 달콤한 데이트"},
+                    {emoji: "👨‍👩‍👧‍👦", title: "가족 중심", text: "아이들을 좋아하는 모성애"}
+                ],
+                matchScore: 92
+            },
+            {
+                avatar: "👩‍💼",
+                name: "최수연",
+                age: "27세 (1997년생)",
+                description: "마케팅 매니저로 일하는 전략가 스타일, 커리어를 중시하는 창의적이고 에너지 넘치는 여성입니다.",
+                details: {
+                    meeting: "회사 행사나 네트워킹 파티에서",
+                    job: "마케팅 매니저",
+                    personality: "창의적이고 활발함",
+                    impression: "밝은 에너지와 세련된 스타일"
+                },
+                meetingPrediction: "2025년 겨울에 직장 관련 모임에서 만날 것 같습니다. 그녀의 밝은 에너지에 매력을 느끼게 될 거예요!",
+                compatibility: [
+                    {emoji: "🎨", title: "창의성", text: "새로운 아이디어가 넘치는 대화"},
+                    {emoji: "🥂", title: "사교적", text: "다양한 사람들과의 즐거운 만남"},
+                    {emoji: "✈️", title: "여행 러버", text: "함께 떠나는 로맨틱 여행"},
+                    {emoji: "💪", title: "열정적", text: "목표를 향한 강한 추진력"}
+                ],
+                matchScore: 91
+            },
+            {
+                avatar: "👩‍🎨",
+                name: "한예린",
+                age: "25세 (1999년생)",
+                description: "그래픽 디자이너로 일하는 감각적, 조용한 예술가입니다.",
+                details: {
+                    meeting: "갤러리나 전시회에서",
+                    job: "그래픽 디자이너",
+                    personality: "예술적이고 감성적",
+                    impression: "독특한 패션 센스와 아티스틱한 매력"
+                },
+                meetingPrediction: "2025년 가을에 전시회나 문화 행사에서 만날 것 같습니다. 예술에 대한 공통 관심사로 가까워질 거예요!",
+                compatibility: [
+                    {emoji: "🎨", title: "예술적 감성", text: "아름다운 것들을 함께 감상"},
+                    {emoji: "📸", title: "인스타그래머", text: "예쁜 사진으로 추억 만들기"},
+                    {emoji: "🌈", title: "컬러풀한 일상", text: "매일이 새롭고 특별한 관계"},
+                    {emoji: "💫", title: "영감을 주는", text: "서로에게 창작 동기 부여"}
+                ],
+                matchScore: 88
+            },
+            {
+                avatar: "👩‍💻",
+                name: "오하늘",
+                age: "24세 (2000년생)",
+                description: "웹 개발자로 일하는 논리적이며 독립적인 성향의 똑똑하고 진취적인 여성입니다.",
+                details: {
+                    meeting: "카페나 코워킹 스페이스에서",
+                    job: "웹 개발자",
+                    personality: "똑똑하고 독립적",
+                    impression: "현대적이고 쿨한 매력"
+                },
+                meetingPrediction: "2025년 여름에 IT 관련 행사나 스터디 모임에서 만날 것 같습니다. 공통 관심사로 빠르게 친해질 거예요!",
+                compatibility: [
+                    {emoji: "💻", title: "기술적 이해", text: "서로의 업무를 이해하는 동반자"},
+                    {emoji: "🚀", title: "미래지향적", text: "새로운 트렌드에 민감"},
+                    {emoji: "🎯", title: "목표 지향", text: "함께 성장하는 파트너십"},
+                    {emoji: "🔥", title: "열정적", text: "일과 사랑 모두에 적극적"}
+                ],
+                matchScore: 90
+            },
+            {
+                avatar: "👩‍🏫",
+                name: "김서현",
+                age: "28세 (1996년생)",
+                description: "초등학교 교사로 일하는 꼼꼼하고 배려 많은 성격, 밝고 아이들을 사랑하는 여성입니다.",
+                details: {
+                    meeting: "공원이나 교육 행사에서",
+                    job: "초등학교 교사",
+                    personality: "밝고 인내심이 많음",
+                    impression: "아이들 같은 순수함과 따뜻함"
+                },
+                meetingPrediction: "2025년 봄에 교육 관련 봉사활동이나 아이들 행사에서 만날 것 같습니다. 그녀의 순수한 마음에 감동받을 거예요!",
+                compatibility: [
+                    {emoji: "👶", title: "아이 사랑", text: "미래의 좋은 엄마가 될 자질"},
+                    {emoji: "🌻", title: "밝은 성격", text: "항상 긍정적이고 웃음이 많음"},
+                    {emoji: "📚", title: "교육열", text: "가족의 성장을 도움"},
+                    {emoji: "🏠", title: "가정적", text: "따뜻한 가정을 만드는 능력"}
+                ],
+                matchScore: 95
+            },
+            {
+                avatar: "👩‍🌾",
+                name: "박채영",
+                age: "27세 (1997년생)",
+                description: "스마트팜 운영자로 일하는 건강한 자연인, 실용적이고 자연을 사랑하는 여성입니다.",
+                details: {
+                    meeting: "농장이나 자연 체험장에서",
+                    job: "스마트팜 운영자",
+                    personality: "자연친화적이고 건강함",
+                    impression: "햇살 같은 밝음과 건강미"
+                },
+                meetingPrediction: "2025년 여름에 농촌 체험이나 자연 관련 행사에서 만날 것 같습니다. 자연스럽고 순수한 매력에 빠지게 될 거예요!",
+                compatibility: [
+                    {emoji: "🌾", title: "자연 친화", text: "건강한 라이프스타일"},
+                    {emoji: "🥗", title: "웰빙", text: "건강한 먹거리와 생활"},
+                    {emoji: "🌱", title: "성장 마인드", text: "함께 키워가는 사랑"},
+                    {emoji: "🏞️", title: "힐링", text: "자연 속에서의 평화로운 시간"}
+                ],
+                matchScore: 89
+            },
+            {
+                avatar: "👩‍⚗️",
+                name: "신유진",
+                age: "29세 (1995년생)",
+                description: "임상연구원으로 일하는 조용한 집중력, 건강 관리형 똑똑하고 세심한 여성입니다.",
+                details: {
+                    meeting: "병원이나 연구소에서",
+                    job: "임상연구원",
+                    personality: "똑똑하고 꼼꼼함",
+                    impression: "지적이면서도 따뜻한 매력"
+                },
+                meetingPrediction: "2025년 봄에 의료 관련 세미나나 학회에서 만날 것 같습니다. 그녀의 전문성과 따뜻함에 매력을 느낄 거예요!",
+                compatibility: [
+                    {emoji: "💊", title: "의학 지식", text: "건강을 책임지는 전문성"},
+                    {emoji: "🔬", title: "연구정신", text: "꼼꼼하고 정확한 성격"},
+                    {emoji: "❤️", title: "치유의 마음", text: "상처를 아물게 하는 따뜻함"},
+                    {emoji: "🌟", title: "성취욕", text: "함께 성장하는 파트너"}
+                ],
+                matchScore: 91
+            },
+            {
+                avatar: "👩‍💼",
+                name: "윤서아",
+                age: "26세 (1998년생)",
+                description: "펀드매니저로 일하는 냉철하지만 따뜻한 전략가 똑똑하고 야심찬 여성입니다.",
+                details: {
+                    meeting: "은행이나 금융 세미나에서",
+                    job: "펀드매니저",
+                    personality: "똑똑하고 계획적",
+                    impression: "세련되고 프로페셔널한 모습"
+                },
+                meetingPrediction: "2025년 여름에 금융 관련 행사나 투자 세미나에서 만날 것 같습니다. 그녀의 지적인 매력에 빠지게 될 거예요!",
+                compatibility: [
+                    {emoji: "💰", title: "경제 감각", text: "현명한 재정 관리 능력"},
+                    {emoji: "📈", title: "미래 계획", text: "체계적인 인생 설계"},
+                    {emoji: "💎", title: "세련미", text: "고급스러운 취향과 스타일"},
+                    {emoji: "🎯", title: "목표 달성", text: "함께 꿈을 이루는 파트너"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👩‍🚀",
+                name: "김하린",
+                age: "27세 (1997년생)",
+                description: "항공우주 엔지니어로 일하는 이성적이며 차분한 탐험가입니다.",
+                details: {
+                    meeting: "항공우주 연구소나 과학관에서",
+                    job: "항공우주 엔지니어",
+                    personality: "논리적이고 탐구적",
+                    impression: "지적이고 신비로운 매력"
+                },
+                meetingPrediction: "2025년 가을에 과학 박물관이나 우주 관련 행사에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🚀", title: "우주 탐험", text: "무한한 가능성과 꿈"},
+                    {emoji: "🔬", title: "과학적 사고", text: "논리적이고 체계적"},
+                    {emoji: "⭐", title: "별처럼", text: "신비롭고 아름다운 관계"},
+                    {emoji: "🌌", title: "우주적 사랑", text: "광활한 마음과 이해"}
+                ],
+                matchScore: 86
+            },
+            {
+                avatar: "👩‍🍳",
+                name: "장미소",
+                age: "25세 (1999년생)",
+                description: "푸드 크리에이터로 일하는 감성적이고 사랑 넘치는 셰프입니다.",
+                details: {
+                    meeting: "요리 클래스나 맛집에서",
+                    job: "푸드 크리에이터",
+                    personality: "감성적이고 창의적",
+                    impression: "따뜻하고 정성스러운 모습"
+                },
+                meetingPrediction: "2025년 봄에 요리 수업이나 푸드 페스티벌에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🍰", title: "요리 솜씨", text: "매일 새로운 맛의 발견"},
+                    {emoji: "📹", title: "콘텐츠", text: "함께 만드는 맛있는 영상"},
+                    {emoji: "💕", title: "정성", text: "사랑을 담아 만든 음식"},
+                    {emoji: "🌟", title: "크리에이터", text: "창의적인 아이디어 무한대"}
+                ],
+                matchScore: 89
+            },
+            {
+                avatar: "👩‍🔬",
+                name: "이윤지",
+                age: "30세 (1994년생)",
+                description: "화학 연구소 실험 책임자로 일하는 꼼꼼한 계획형입니다.",
+                details: {
+                    meeting: "연구소나 과학 세미나에서",
+                    job: "화학 연구원",
+                    personality: "체계적이고 정확함",
+                    impression: "전문적이고 신뢰할 수 있는"
+                },
+                meetingPrediction: "2025년 여름에 과학 관련 학회에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "⚗️", title: "화학 반응", text: "완벽한 궁합의 화학작용"},
+                    {emoji: "🔬", title: "정밀함", text: "세심하고 정확한 성격"},
+                    {emoji: "📊", title: "체계적", text: "계획적이고 안정적인 관계"},
+                    {emoji: "🧪", title: "실험정신", text: "새로운 시도를 즐기는"}
+                ],
+                matchScore: 84
+            },
+            {
+                avatar: "👩‍🎤",
+                name: "배지우",
+                age: "26세 (1998년생)",
+                description: "인디 뮤지션으로 활동하는 자유로운 영혼, 감성적인 연애를 꿈꾸는 여성입니다.",
+                details: {
+                    meeting: "라이브 카페나 음악 페스티벌에서",
+                    job: "인디 뮤지션",
+                    personality: "자유롭고 예술적",
+                    impression: "독특하고 매력적인 아우라"
+                },
+                meetingPrediction: "2025년 가을에 음악 공연이나 페스티벌에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🎵", title: "음악", text: "함께 듣고 만드는 선율"},
+                    {emoji: "🌙", title: "감성", text: "달빛 아래 로맨틱한 시간"},
+                    {emoji: "🎸", title: "자유로움", text: "구속받지 않는 사랑"},
+                    {emoji: "💫", title: "예술혼", text: "서로에게 영감을 주는"}
+                ],
+                matchScore: 88
+            },
+            {
+                avatar: "👩‍💻",
+                name: "문예지",
+                age: "28세 (1996년생)",
+                description: "드라마 작가로 일하는 상상력이 풍부하고 감성적인 스토리텔러입니다.",
+                details: {
+                    meeting: "방송국이나 작가 모임에서",
+                    job: "드라마 작가",
+                    personality: "상상력 풍부하고 감성적",
+                    impression: "이야기꾼의 매력적인 말솜씨"
+                },
+                meetingPrediction: "2025년 겨울에 문화 행사나 출판 관련 모임에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "📝", title: "스토리", text: "매일이 드라마 같은 로맨스"},
+                    {emoji: "💭", title: "상상력", text: "무한한 가능성의 세계"},
+                    {emoji: "📺", title: "드라마", text: "함께 보는 재미있는 작품들"},
+                    {emoji: "💕", title: "로맨스", text: "현실보다 달콤한 사랑"}
+                ],
+                matchScore: 92
+            },
+            {
+                avatar: "👩‍📷",
+                name: "정시윤",
+                age: "29세 (1995년생)",
+                description: "여행 사진 작가로 일하는 감각적이고 자유로운 성향의 여성입니다.",
+                details: {
+                    meeting: "여행지나 사진 전시회에서",
+                    job: "여행 사진작가",
+                    personality: "자유롭고 모험적",
+                    impression: "세계 여행자의 여유로운 매력"
+                },
+                meetingPrediction: "2025년 여름에 여행지나 사진 워크샵에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "📷", title: "사진", text: "아름다운 순간들을 기록"},
+                    {emoji: "✈️", title: "여행", text: "함께 떠나는 세계 곳곳"},
+                    {emoji: "🌅", title: "감성", text: "일출과 일몰의 로맨스"},
+                    {emoji: "🗺️", title: "모험", text: "새로운 곳을 탐험하는 즐거움"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👩‍🧘",
+                name: "박소은",
+                age: "27세 (1997년생)",
+                description: "요가 강사로 일하는 명상과 내면 중심의 평화로운 여성입니다.",
+                details: {
+                    meeting: "요가 스튜디오나 명상 센터에서",
+                    job: "요가 강사",
+                    personality: "평온하고 내면 중심적",
+                    impression: "고요한 아름다움과 평화로운 에너지"
+                },
+                meetingPrediction: "2025년 봄에 요가 클래스나 힐링 캠프에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🧘", title: "명상", text: "함께하는 평온한 시간"},
+                    {emoji: "🌸", title: "힐링", text: "서로를 치유하는 관계"},
+                    {emoji: "☯️", title: "균형", text: "조화로운 마음과 몸"},
+                    {emoji: "🕯️", title: "평화", text: "고요하고 깊은 사랑"}
+                ],
+                matchScore: 85
+            },
+            {
+                avatar: "👩‍📚",
+                name: "임지아",
+                age: "26세 (1998년생)",
+                description: "동화책 편집자로 일하는 따뜻하고 섬세한 성격의 여성입니다.",
+                details: {
+                    meeting: "서점이나 출판사에서",
+                    job: "동화책 편집자",
+                    personality: "따뜻하고 순수한",
+                    impression: "동화 속 주인공 같은 매력"
+                },
+                meetingPrediction: "2025년 가을에 북페어나 도서관 행사에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "📖", title: "동화", text: "매일이 동화 같은 사랑"},
+                    {emoji: "🎀", title: "순수함", text: "맑고 깨끗한 마음"},
+                    {emoji: "🌟", title: "꿈", text: "함께 꾸는 아름다운 꿈"},
+                    {emoji: "💕", title: "따뜻함", text: "포근하고 안전한 사랑"}
+                ],
+                matchScore: 90
+            },
+            {
+                avatar: "👩‍🤟",
+                name: "하유림",
+                age: "28세 (1996년생)",
+                description: "수화 통역사로 일하는 배려심 깊고 인내심이 강한 여성입니다.",
+                details: {
+                    meeting: "복지관이나 통역 현장에서",
+                    job: "수화 통역사",
+                    personality: "배려심 깊고 인내심 강함",
+                    impression: "따뜻한 손길과 이해심"
+                },
+                meetingPrediction: "2025년 봄에 봉사활동이나 복지 행사에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "👐", title: "소통", text: "마음으로 나누는 깊은 대화"},
+                    {emoji: "❤️", title: "배려", text: "상대방을 이해하는 마음"},
+                    {emoji: "🤝", title: "도움", text: "어려운 이웃을 돕는 따뜻함"},
+                    {emoji: "💎", title: "진정성", text: "진실하고 순수한 마음"}
+                ],
+                matchScore: 93
+            },
+            {
+                avatar: "👩‍💼",
+                name: "고예나",
+                age: "30세 (1994년생)",
+                description: "브랜드 디렉터로 일하는 감각적이고 카리스마 있는 여성입니다.",
+                details: {
+                    meeting: "브랜드 런칭 행사나 패션쇼에서",
+                    job: "브랜드 디렉터",
+                    personality: "감각적이고 리더십 있는",
+                    impression: "세련되고 강한 카리스마"
+                },
+                meetingPrediction: "2025년 여름에 패션 관련 행사에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "👗", title: "패션", text: "세련된 스타일과 트렌드 감각"},
+                    {emoji: "💼", title: "리더십", text: "서로를 이끌어가는 파워 커플"},
+                    {emoji: "✨", title: "브랜딩", text: "특별하고 독특한 우리만의 스타일"},
+                    {emoji: "🎯", title: "목표", text: "함께 성취하는 큰 꿈들"}
+                ],
+                matchScore: 86
+            },
+            {
+                avatar: "👩‍🌺",
+                name: "이다현",
+                age: "25세 (1999년생)",
+                description: "플로리스트로 일하는 꽃처럼 여유롭고 포근한 여성입니다.",
+                details: {
+                    meeting: "꽃가게나 정원에서",
+                    job: "플로리스트",
+                    personality: "여유롭고 섬세한",
+                    impression: "꽃 같은 아름다움과 향기"
+                },
+                meetingPrediction: "2025년 봄에 꽃축제나 정원 박람회에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🌸", title: "꽃", text: "매일 받는 아름다운 꽃다발"},
+                    {emoji: "🌿", title: "자연", text: "자연 속에서의 평화로운 데이트"},
+                    {emoji: "💐", title: "로맨스", text: "꽃으로 표현하는 사랑"},
+                    {emoji: "🦋", title: "아름다움", text: "나비처럼 우아한 매력"}
+                ],
+                matchScore: 91
+            },
+            {
+                avatar: "👩‍🏛️",
+                name: "홍슬기",
+                age: "29세 (1995년생)",
+                description: "박물관 큐레이터로 일하는 지적이고 조용한 성향의 여성입니다.",
+                details: {
+                    meeting: "박물관이나 전시회에서",
+                    job: "박물관 큐레이터",
+                    personality: "지적이고 차분한",
+                    impression: "고전적인 아름다움과 지적 매력"
+                },
+                meetingPrediction: "2025년 가을에 박물관이나 역사 전시회에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🏛️", title: "문화", text: "함께 즐기는 깊이 있는 문화생활"},
+                    {emoji: "📜", title: "역사", text: "과거와 현재를 잇는 지혜"},
+                    {emoji: "🎨", title: "예술", text: "아름다운 작품들을 함께 감상"},
+                    {emoji: "📚", title: "지식", text: "끝없는 배움과 성장"}
+                ],
+                matchScore: 84
+            },
+            {
+                avatar: "👩‍🐕",
+                name: "유세빈",
+                age: "27세 (1997년생)",
+                description: "동물보호단체 활동가로 일하는 정의롭고 따뜻한 마음을 가진 여성입니다.",
+                details: {
+                    meeting: "동물보호소나 관련 행사에서",
+                    job: "동물보호 활동가",
+                    personality: "정의롭고 동물을 사랑하는",
+                    impression: "순수하고 따뜻한 마음씨"
+                },
+                meetingPrediction: "2025년 여름에 동물 관련 봉사활동에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🐶", title: "동물 사랑", text: "함께 키우는 반려동물들"},
+                    {emoji: "💚", title: "환경", text: "지구를 사랑하는 마음"},
+                    {emoji: "🤲", title: "봉사", text: "함께하는 의미 있는 활동들"},
+                    {emoji: "🌍", title: "사회정의", text: "더 나은 세상을 만드는 꿈"}
+                ],
+                matchScore: 88
+            },
+            {
+                avatar: "👩‍👗",
+                name: "정예린",
+                age: "26세 (1998년생)",
+                description: "패션 스타일리스트로 일하는 스타일 감각이 뛰어난 미적 인간입니다.",
+                details: {
+                    meeting: "패션 스튜디오나 촬영장에서",
+                    job: "패션 스타일리스트",
+                    personality: "세련되고 감각적",
+                    impression: "완벽한 스타일링과 패션 센스"
+                },
+                meetingPrediction: "2025년 가을에 패션 촬영이나 스타일링 작업에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "👠", title: "패션", text: "완벽한 스타일링과 코디"},
+                    {emoji: "📸", title: "촬영", text: "함께 만드는 아름다운 사진들"},
+                    {emoji: "✨", title: "센스", text: "뛰어난 미적 감각"},
+                    {emoji: "🎭", title: "변신", text: "매번 새로운 모습으로 놀라게"}
+                ],
+                matchScore: 89
+            },
+            {
+                avatar: "👩‍💼",
+                name: "노서진",
+                age: "28세 (1996년생)",
+                description: "스타트업 창업자로 일하는 열정적이고 주도적인 여성입니다.",
+                details: {
+                    meeting: "스타트업 행사나 투자 미팅에서",
+                    job: "스타트업 창업자",
+                    personality: "열정적이고 도전적",
+                    impression: "강한 추진력과 리더십"
+                },
+                meetingPrediction: "2025년 봄에 창업 관련 행사나 네트워킹에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🚀", title: "창업", text: "함께 만들어가는 새로운 사업"},
+                    {emoji: "💡", title: "아이디어", text: "혁신적이고 창의적인 생각들"},
+                    {emoji: "📈", title: "성장", text: "끊임없이 발전하는 관계"},
+                    {emoji: "🏆", title: "성공", text: "함께 이루는 큰 성취들"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👩‍🎭",
+                name: "안지수",
+                age: "27세 (1997년생)",
+                description: "성악가로 활동하는 풍부한 감정, 예술적 사랑을 추구하는 여성입니다.",
+                details: {
+                    meeting: "콘서트홀이나 오페라 공연장에서",
+                    job: "성악가",
+                    personality: "감정이 풍부하고 예술적",
+                    impression: "우아하고 고급스러운 매력"
+                },
+                meetingPrediction: "2025년 겨울에 클래식 공연이나 오페라에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🎵", title: "클래식", text: "아름다운 선율과 화음"},
+                    {emoji: "🎭", title: "예술", text: "깊이 있는 예술적 교감"},
+                    {emoji: "🌹", title: "우아함", text: "고급스럽고 품격 있는 사랑"},
+                    {emoji: "💫", title: "감동", text: "마음 깊이 울리는 감정"}
+                ],
+                matchScore: 91
+            },
+            {
+                avatar: "👩‍📹",
+                name: "윤다인",
+                age: "24세 (2000년생)",
+                description: "시니어 유튜버로 활동하는 유쾌하고 공감력이 넘치는 여성입니다.",
+                details: {
+                    meeting: "유튜브 촬영 현장이나 크리에이터 행사에서",
+                    job: "유튜버",
+                    personality: "밝고 소통을 좋아하는",
+                    impression: "에너지 넘치고 친근한 매력"
+                },
+                meetingPrediction: "2025년 여름에 크리에이터 이벤트나 온라인 모임에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "📹", title: "콘텐츠", text: "함께 만드는 재미있는 영상들"},
+                    {emoji: "😄", title: "유머", text: "매일 웃음이 끊이지 않는"},
+                    {emoji: "👥", title: "소통", text: "많은 사람들과 함께하는 즐거움"},
+                    {emoji: "🎉", title: "에너지", text: "활기차고 긍정적인 일상"}
+                ],
+                matchScore: 90
+            },
+            {
+                avatar: "👩‍🎨",
+                name: "송지아",
+                age: "29세 (1995년생)",
+                description: "공예 작가로 활동하는 손끝으로 마음을 전하는 스타일의 여성입니다.",
+                details: {
+                    meeting: "공예 워크샵이나 수공예품 전시회에서",
+                    job: "공예 작가",
+                    personality: "섬세하고 정성스러운",
+                    impression: "따뜻한 손길과 정성스러운 마음"
+                },
+                meetingPrediction: "2025년 가을에 핸드메이드 페어나 공예 수업에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "✋", title: "수공예", text: "손으로 만드는 특별한 선물들"},
+                    {emoji: "🎁", title: "정성", text: "마음을 담은 수제 작품들"},
+                    {emoji: "🏠", title: "아늑함", text: "집을 꾸미는 센스와 취향"},
+                    {emoji: "💝", title: "사랑표현", text: "직접 만든 선물로 전하는 마음"}
+                ],
+                matchScore: 86
+            },
+            {
+                avatar: "👩‍🌊",
+                name: "김나연",
+                age: "28세 (1996년생)",
+                description: "해양생물학자로 일하는 바다처럼 깊고 신비로운 성격의 여성입니다.",
+                details: {
+                    meeting: "수족관이나 해양 연구소에서",
+                    job: "해양생물학자",
+                    personality: "신비롭고 깊이 있는",
+                    impression: "바다처럼 넓고 깊은 마음"
+                },
+                meetingPrediction: "2025년 여름에 해양 관련 연구소나 바다에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "🌊", title: "바다", text: "함께하는 해변 데이트와 여행"},
+                    {emoji: "🐋", title: "해양생물", text: "신비로운 바다 속 세계 탐험"},
+                    {emoji: "🏖️", title: "자연", text: "자연과 함께하는 평화로운 시간"},
+                    {emoji: "💙", title: "깊이", text: "바다처럼 깊고 넓은 사랑"}
+                ],
+                matchScore: 88
+            },
+            {
+                avatar: "👩‍🌱",
+                name: "서윤아",
+                age: "26세 (1998년생)",
+                description: "도시농업 전문가로 일하는 생태적 감성, 환경중심 생활을 하는 여성입니다.",
+                details: {
+                    meeting: "도시농장이나 환경 관련 행사에서",
+                    job: "도시농업 전문가",
+                    personality: "친환경적이고 건강한",
+                    impression: "자연스럽고 건강한 아름다움"
+                },
+                meetingPrediction: "2025년 봄에 도시농업 체험이나 환경 캠페인에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🌱", title: "도시농업", text: "함께 키우는 작은 정원"},
+                    {emoji: "🌍", title: "환경", text: "지구를 생각하는 친환경 생활"},
+                    {emoji: "🥬", title: "유기농", text: "건강한 먹거리와 라이프스타일"},
+                    {emoji: "♻️", title: "지속가능", text: "미래를 위한 지속가능한 사랑"}
+                ],
+                matchScore: 85
+            },
+            {
+                avatar: "👩‍🗣️",
+                name: "조아름",
+                age: "27세 (1997년생)",
+                description: "언어치료사로 일하는 배려 많고 감정적 안정감을 중시하는 여성입니다.",
+                details: {
+                    meeting: "병원이나 치료센터에서",
+                    job: "언어치료사",
+                    personality: "인내심 많고 따뜻한",
+                    impression: "차분하고 안정감을 주는"
+                },
+                meetingPrediction: "2025년 가을에 의료 관련 세미나나 치료센터에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "💬", title: "소통", text: "진심어린 대화와 경청"},
+                    {emoji: "🤗", title: "치유", text: "서로를 위로하고 치유하는"},
+                    {emoji: "👂", title: "경청", text: "마음을 읽어주는 따뜻함"},
+                    {emoji: "💕", title: "인내", text: "서로를 기다려주는 사랑"}
+                ],
+                matchScore: 92
+            },
+            {
+                avatar: "👩‍⚕️",
+                name: "이민정",
+                age: "30세 (1994년생)",
+                description: "정신과 상담사로 일하는 내면 치유 중심, 공감을 잘하는 여성입니다.",
+                details: {
+                    meeting: "상담센터나 심리학 세미나에서",
+                    job: "정신과 상담사",
+                    personality: "공감능력이 뛰어나고 지혜로운",
+                    impression: "마음을 편안하게 해주는 따뜻함"
+                },
+                meetingPrediction: "2025년 겨울에 심리 관련 워크샵이나 치유 프로그램에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🧠", title: "심리", text: "마음을 이해하고 공감하는"},
+                    {emoji: "💆", title: "힐링", text: "서로에게 위로가 되는 관계"},
+                    {emoji: "🌸", title: "치유", text: "상처를 아물게 하는 사랑"},
+                    {emoji: "🤝", title: "신뢰", text: "깊은 신뢰와 이해"}
+                ],
+                matchScore: 94
+            },
+            {
+                avatar: "👩‍💻",
+                name: "박지민",
+                age: "25세 (1999년생)",
+                description: "디지털 노마드 작가로 활동하는 세계를 여행하며 쓰는 삶을 사는 여성입니다.",
+                details: {
+                    meeting: "카페나 코워킹 스페이스에서",
+                    job: "디지털 노마드 작가",
+                    personality: "자유롭고 모험적인",
+                    impression: "세계 여행자의 자유로운 영혼"
+                },
+                meetingPrediction: "2025년 여름에 해외 여행지나 노마드 커뮤니티에서 만날 예정입니다!",
+                compatibility: [
+                    {emoji: "✈️", title: "여행", text: "함께 떠나는 세계 여행"},
+                    {emoji: "💻", title: "원격근무", text: "어디서든 함께할 수 있는"},
+                    {emoji: "📝", title: "글쓰기", text: "함께 만드는 여행기와 추억"},
+                    {emoji: "🌍", title: "자유", text: "경계 없는 자유로운 사랑"}
+                ],
+                matchScore: 87
+            },
+            {
+                avatar: "👩‍🎮",
+                name: "류지우",
+                age: "26세 (1998년생)",
+                description: "AI 캐릭터 기획자로 일하는 현실과 가상 세계 모두를 이해하는 창작형 여성입니다.",
+                details: {
+                    meeting: "게임 회사나 IT 행사에서",
+                    job: "AI 캐릭터 기획자",
+                    personality: "창의적이고 미래지향적",
+                    impression: "게임과 현실을 넘나드는 독특함"
+                },
+                meetingPrediction: "2025년 가을에 게임 개발 컨퍼런스나 AI 관련 행사에서 만날 것 같아요!",
+                compatibility: [
+                    {emoji: "🤖", title: "AI", text: "미래 기술에 대한 공통 관심"},
+                    {emoji: "🎮", title: "게임", text: "함께 즐기는 가상현실 모험"},
+                    {emoji: "💡", title: "창의성", text: "무한한 상상력과 아이디어"},
+                    {emoji: "🚀", title: "미래", text: "함께 만들어가는 새로운 세상"}
+                ],
+                matchScore: 89
+            }
+        ];
+
+        // 옵션 생성 함수들
+        function initSelectors() {
+            const yearSelect = document.getElementById('yearSelect');
+            const monthSelect = document.getElementById('monthSelect');
+            
+            // 년도 옵션 (1960-2005)
+            for (let year = 2005; year >= 1960; year--) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year + '년';
+                yearSelect.appendChild(option);
+            }
+            
+            // 월 옵션
+            for (let month = 1; month <= 12; month++) {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = month + '월';
+                monthSelect.appendChild(option);
+            }
+        }
+
+        // 분석 버튼 활성화 체크
+        function checkAnalyzeButton() {
+            const hasImage = window.currentImageData;
+            const hasName = document.getElementById('nameInput').value.trim();
+            const hasGender = document.getElementById('genderSelect').value;
+            const hasYear = document.getElementById('yearSelect').value;
+            const hasMonth = document.getElementById('monthSelect').value;
+            const hasRegion = document.getElementById('regionSelect').value;
+            const hasJob = document.getElementById('jobSelect').value;
+            
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            analyzeBtn.disabled = !(hasImage && hasName && hasGender && hasYear && hasMonth && hasRegion && hasJob);
+        }
+
+        // 이미지 업로드 처리
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            
+            if (file) {
+                if (!file.type.startsWith('image/')) {
+                    alert('이미지 파일만 업로드 가능합니다.');
+                    return;
+                }
+                
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('파일 크기는 10MB 이하여야 합니다.');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById('previewImage');
+                    const previewContainer = document.getElementById('previewContainer');
+                    
+                    previewImage.src = e.target.result;
+                    previewContainer.style.display = 'block';
+                    
+                    window.currentImageData = e.target.result;
+                    
+                    previewImage.onload = function() {
+                        checkAnalyzeButton();
+                        previewContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 입력 필드 이벤트 리스너들
+        document.getElementById('nameInput').addEventListener('input', checkAnalyzeButton);
+        document.getElementById('genderSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('yearSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('monthSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('regionSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('jobSelect').addEventListener('change', checkAnalyzeButton);
+
+        // 드래그 앤 드롭 기능
+        const uploadSection = document.getElementById('uploadSection');
+        
+        uploadSection.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.add('dragover');
+        });
+        
+        uploadSection.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+        });
+        
+        uploadSection.addEventListener('drop', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                
+                if (!file.type.startsWith('image/')) {
+                    alert('이미지 파일만 업로드 가능합니다.');
+                    return;
+                }
+                
+                const fileInput = document.getElementById('imageUpload');
+                const dt = new DataTransfer();
+                dt.items.add(file);
+                fileInput.files = dt.files;
+                
+                const event = new Event('change', { bubbles: true });
+                fileInput.dispatchEvent(event);
+            }
+        });
+
+        // 사용 제한 관리
+        let testCount = 0;
+        let lastTestTime = 0;
+        const TEST_COOLDOWN = 5000; // 5초 쿨다운
+        const DAILY_LIMIT = 8; // 하루 8회 제한
+
+        function getTodayTestCount() {
+            const today = new Date().toDateString();
+            const stored = localStorage.getItem('marriageTestData');
+            
+            if (stored) {
+                const data = JSON.parse(stored);
+                if (data.date === today) {
+                    return data.count;
+                }
+            }
+            return 0;
+        }
+
+        function saveTodayTestCount(count) {
+            const today = new Date().toDateString();
+            const data = { date: today, count: count };
+            localStorage.setItem('marriageTestData', JSON.stringify(data));
+        }
+
+        function canTest() {
+            const now = Date.now();
+            const todayCount = getTodayTestCount();
+            
+            if (now - lastTestTime < TEST_COOLDOWN) {
+                const remaining = Math.ceil((TEST_COOLDOWN - (now - lastTestTime)) / 1000);
+                alert(`⏰ ${remaining}초 후에 다시 시도해주세요!`);
+                return false;
+            }
+            
+            if (todayCount >= DAILY_LIMIT) {
+                showLimitMessage(todayCount);
+                return false;
+            }
+            
+            return true;
+        }
+
+        function showLimitMessage(count) {
+            const messages = [
+                `💒 오늘 ${count}번째 분석이네요! 정말 열심이시군요!`,
+                `✨ 이미 충분히 분석하셨어요! 결과를 친구들과 공유해보세요!`,
+                `🌟 내일 다시 오시면 새로운 운명이 기다려요!`,
+                `💕 결과가 마음에 드셨나요? SNS에 공유해보세요!`
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            if (confirm(`${randomMessage}\n\n그래도 계속 분석하시겠어요?`)) {
+                return true;
+            }
+            
+            return false;
+        }
+
+        // 간단한 해시 함수
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash);
+        }
+
+        // 미래 배우자 결정 함수
+        function getFuturePartnerFromData(imageData, name, gender, year, month, region, job) {
+            const combinedData = (imageData || '') + name + gender + year + month + region + job;
+            const hash = simpleHash(combinedData);
+            
+            // 성별에 따라 필터링
+            let filteredPartners = futurePartnerData;
+            if (gender === '남성') {
+                filteredPartners = futurePartnerData.filter(partner => 
+                    partner.avatar.includes('👩') || partner.avatar.includes('♀')
+                );
+            } else if (gender === '여성') {
+                filteredPartners = futurePartnerData.filter(partner => 
+                    partner.avatar.includes('👨') || partner.avatar.includes('♂')
+                );
+            }
+            
+            const partnerIndex = hash % filteredPartners.length;
+            return filteredPartners[partnerIndex];
+        }
+
+        // 미래 배우자 분석
+        function analyzePartner() {
+            if (!canTest()) {
+                return;
+            }
+            
+            if (!window.currentImageData) {
+                alert('사진을 먼저 업로드해주세요!');
+                return;
+            }
+            
+            const name = document.getElementById('nameInput').value.trim();
+            const gender = document.getElementById('genderSelect').value;
+            const year = document.getElementById('yearSelect').value;
+            const month = document.getElementById('monthSelect').value;
+            const region = document.getElementById('regionSelect').value;
+            const job = document.getElementById('jobSelect').value;
+            
+            if (!name || !gender || !year || !month || !region || !job) {
+                alert('모든 정보를 입력해주세요!');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'block';
+            document.querySelector('.upload-section').style.display = 'none';
+            document.querySelector('.input-section').style.display = 'none';
+            
+            const todayCount = getTodayTestCount() + 1;
+            saveTodayTestCount(todayCount);
+            lastTestTime = Date.now();
+            
+            setTimeout(() => {
+                const selectedPartner = getFuturePartnerFromData(
+                    window.currentImageData, 
+                    name, 
+                    gender, 
+                    year, 
+                    month, 
+                    region, 
+                    job
+                );
+                
+                document.getElementById('partnerAvatar').textContent = selectedPartner.avatar;
+                document.getElementById('partnerName').textContent = selectedPartner.name;
+                document.getElementById('partnerAge').textContent = selectedPartner.age;
+                document.getElementById('partnerDescription').textContent = selectedPartner.description;
+                document.getElementById('matchScore').textContent = `💕 궁합 점수: ${selectedPartner.matchScore}%`;
+                document.getElementById('meetingPredictionText').textContent = selectedPartner.meetingPrediction;
+                
+                // 상세 정보 업데이트
+                const detailsText = document.getElementById('partnerDetailsText');
+                detailsText.innerHTML = `
+                    <p><strong>📍 만날 장소:</strong> ${selectedPartner.details.meeting}</p>
+                    <p><strong>💼 직업:</strong> ${selectedPartner.details.job}</p>
+                    <p><strong>🎯 성격:</strong> ${selectedPartner.details.personality}</p>
+                    <p><strong>💕 첫인상:</strong> ${selectedPartner.details.impression}</p>
+                `;
+                
+                // 궁합 특징 표시
+                const compatibilityGrid = document.getElementById('compatibilityGrid');
+                compatibilityGrid.innerHTML = '';
+                selectedPartner.compatibility.forEach(trait => {
+                    const item = document.createElement('div');
+                    item.className = 'compatibility-item';
+                    item.innerHTML = `
+                        <div class="compatibility-emoji">${trait.emoji}</div>
+                        <div class="compatibility-title">${trait.title}</div>
+                        <div class="compatibility-text">${trait.text}</div>
+                    `;
+                    compatibilityGrid.appendChild(item);
+                });
+                
+                window.currentPartnerResult = selectedPartner;
+                window.currentUserInfo = { name, gender, year, month, region, job };
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resultSection').style.display = 'block';
+                
+                if (todayCount >= 3) {
+                    const countMessage = document.createElement('div');
+                    countMessage.style.cssText = `
+                        background: linear-gradient(45deg, #FFE4E1, #FFF0F5);
+                        padding: 0.5rem 1rem;
+                        border-radius: 15px;
+                        margin: 1rem 0;
+                        font-size: 0.9rem;
+                        color: #FF1493;
+                        border: 1px solid rgba(255,182,193,0.3);
+                    `;
+                    countMessage.innerHTML = `💒 오늘 ${todayCount}번째 분석! 운명의 상대를 꼭 찾으시길! ✨`;
+                    
+                    const resultSection = document.getElementById('resultSection');
+                    resultSection.insertBefore(countMessage, resultSection.children[1]);
+                }
+                
+                document.getElementById('resultSection').scrollIntoView({behavior: 'smooth'});
+            }, 5000);
+        }
+
+        // 공유용 이미지 생성
+        function generateShareImage() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return null;
+            }
+
+            const canvas = document.getElementById('shareCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 배경 그라디언트
+            const gradient = ctx.createLinearGradient(0, 0, 0, 800);
+            gradient.addColorStop(0, '#FF69B4');
+            gradient.addColorStop(0.5, '#FFD700');
+            gradient.addColorStop(1, '#FFA500');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 600, 800);
+            
+            // 반투명 흰색 배경
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+            roundRect(ctx, 50, 100, 500, 600, 20);
+            ctx.fill();
+            
+            // 제목
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 32px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('💒 미래 결혼 상대 찾기', 300, 160);
+            
+            // 배우자 아바타
+            ctx.font = '120px Arial, sans-serif';
+            ctx.fillText(window.currentPartnerResult.avatar, 300, 280);
+            
+            // 배우자 이름
+            ctx.fillStyle = '#FF1493';
+            ctx.font = 'bold 36px Arial, sans-serif';
+            ctx.fillText(window.currentPartnerResult.name, 300, 350);
+            
+            // 나이
+            ctx.fillStyle = '#FF69B4';
+            ctx.font = '24px Arial, sans-serif';
+            ctx.fillText(window.currentPartnerResult.age, 300, 390);
+            
+            // 설명
+            ctx.fillStyle = '#555';
+            ctx.font = '18px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            wrapText(ctx, window.currentPartnerResult.description, 300, 430, 400, 25);
+            
+            // 궁합 점수
+            ctx.fillStyle = '#FF1493';
+            ctx.font = 'bold 28px Arial, sans-serif';
+            ctx.fillText(`💕 궁합 점수: ${window.currentPartnerResult.matchScore}%`, 300, 520);
+            
+            // 하단 URL
+            ctx.fillStyle = '#999';
+            ctx.font = '18px Arial, sans-serif';
+            ctx.fillText('💒 미래 결혼 상대 찾기에서 더 많은 분석을!', 300, 650);
+            
+            return canvas.toDataURL('image/png');
+        }
+
+        // 텍스트 줄바꿈 함수
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            let lines = [];
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = context.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && n > 0) {
+                    lines.push(line);
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+            
+            for (let i = 0; i < lines.length; i++) {
+                context.fillText(lines[i], x, y + (i * lineHeight));
+            }
+            
+            return lines;
+        }
+
+        // Canvas RoundRect Polyfill
+        function roundRect(ctx, x, y, w, h, r) {
+            if (w < 2 * r) r = w / 2;
+            if (h < 2 * r) r = h / 2;
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+            return ctx;
+        }
+
+        // 카카오톡 공유
+        function shareToKakao() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return;
+            }
+
+            const shareText = `💒 미래 결혼 상대 찾기 결과!\n\n${window.currentPartnerResult.avatar} ${window.currentPartnerResult.name} (${window.currentPartnerResult.age})\n\n💕 궁합 점수: ${window.currentPartnerResult.matchScore}%\n\n나도 분석해보기: ${window.location.href}`;
+            
+            if (typeof Kakao !== 'undefined' && Kakao.isInitialized && Kakao.isInitialized()) {
+                try {
+                    Kakao.Share.sendDefault({
+                        objectType: 'feed',
+                        content: {
+                            title: '💒 미래 결혼 상대 찾기 결과!',
+                            description: `${window.currentPartnerResult.avatar} ${window.currentPartnerResult.name} (${window.currentPartnerResult.age})\n💕 궁합 점수: ${window.currentPartnerResult.matchScore}%`,
+                            imageUrl: 'https://your-domain.com/marriage-og.jpg',
+                            link: {
+                                mobileWebUrl: window.location.href,
+                                webUrl: window.location.href,
+                            },
+                        },
+                        buttons: [
+                            {
+                                title: '나도 분석하기',
+                                link: {
+                                    mobileWebUrl: window.location.href,
+                                    webUrl: window.location.href,
+                                },
+                            },
+                        ],
+                    });
+                } catch (error) {
+                    fallbackKakaoShare(shareText);
+                }
+            } else {
+                fallbackKakaoShare(shareText);
+            }
+        }
+
+        function fallbackKakaoShare(shareText) {
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                try {
+                    const kakaoUrl = `kakaotalk://share/text?text=${encodeURIComponent(shareText)}`;
+                    window.location.href = kakaoUrl;
+                    
+                    setTimeout(() => {
+                        if (navigator.share) {
+                            navigator.share({
+                                title: '💒 미래 결혼 상대 찾기',
+                                text: shareText,
+                                url: window.location.href
+                            }).catch(error => {
+                                copyToClipboard(shareText);
+                            });
+                        } else {
+                            copyToClipboard(shareText);
+                        }
+                    }, 3000);
+                } catch (error) {
+                    copyToClipboard(shareText);
+                }
+            } else {
+                copyToClipboard(shareText);
+            }
+        }
+
+        // 인스타그램 공유
+        function shareToInstagram() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return;
+            }
+            
+            const shareImageData = generateShareImage();
+            if (!shareImageData) return;
+            
+            const link = document.createElement('a');
+            link.download = `미래결혼상대_${window.currentPartnerResult.name.replace(' ', '_')}.png`;
+            link.href = shareImageData;
+            
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                link.click();
+                setTimeout(() => {
+                    const instagramUrl = 'instagram://camera';
+                    window.location.href = instagramUrl;
+                    
+                    setTimeout(() => {
+                        window.open('https://www.instagram.com/', '_blank');
+                    }, 2000);
+                }, 3000);
+            } else {
+                link.click();
+                window.open('https://www.instagram.com/', '_blank');
+                alert('이미지가 다운로드되었습니다!\n인스타그램에서 업로드해보세요 📷');
+            }
+        }
+
+        // 페이스북 공유
+        function shareToFacebook() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return;
+            }
+
+            const shareUrl = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`💒 미래 결혼 상대 찾기에서 ${window.currentPartnerResult.avatar} ${window.currentPartnerResult.name}이 나왔어요! 궁합 점수 ${window.currentPartnerResult.matchScore}%`);
+            
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${shareText}`;
+            window.open(facebookUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 트위터 공유
+        function shareToTwitter() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return;
+            }
+
+            const shareText = encodeURIComponent(`💒 미래 결혼 상대 찾기 결과: ${window.currentPartnerResult.avatar} ${window.currentPartnerResult.name}! 궁합 점수 ${window.currentPartnerResult.matchScore}% ✨`);
+            const shareUrl = encodeURIComponent(window.location.href);
+            const hashtags = encodeURIComponent('미래결혼상대,운명의배우자,AI분석,결혼운세');
+            
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}&hashtags=${hashtags}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 일반 공유 (링크 복사)
+        function shareGeneral() {
+            if (!window.currentPartnerResult) {
+                alert('먼저 미래 배우자 분석을 완료해주세요!');
+                return;
+            }
+
+            const shareText = `💒 미래 결혼 상대 찾기 결과!\n\n${window.currentPartnerResult.avatar} ${window.currentPartnerResult.name}\n${window.currentPartnerResult.age}\n\n${window.currentPartnerResult.description}\n\n💕 궁합 점수: ${window.currentPartnerResult.matchScore}%\n\n나도 분석해보기: ${window.location.href}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: '💒 미래 결혼 상대 찾기',
+                    text: shareText,
+                    url: window.location.href
+                }).catch(error => {
+                    copyToClipboard(shareText);
+                });
+            } else {
+                copyToClipboard(shareText);
+            }
+        }
+
+        // 클립보드에 복사
+        function copyToClipboard(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('💒 미래 배우자 분석 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨');
+                }).catch(error => {
+                    fallbackCopyToClipboard(text);
+                });
+            } else {
+                fallbackCopyToClipboard(text);
+            }
+        }
+
+        function fallbackCopyToClipboard(text) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    alert('💒 미래 배우자 분석 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨');
+                } else {
+                    alert('복사에 실패했습니다. 수동으로 선택해서 복사해주세요.');
+                }
+            } catch (error) {
+                alert('복사에 실패했습니다. 수동으로 선택해서 복사해주세요.');
+            }
+        }
+
+        function retakeTest() {
+            document.getElementById('resultSection').style.display = 'none';
+            document.querySelector('.upload-section').style.display = 'block';
+            document.querySelector('.input-section').style.display = 'block';
+            
+            // 입력 필드 초기화
+            document.getElementById('imageUpload').value = '';
+            document.getElementById('previewContainer').style.display = 'none';
+            document.getElementById('nameInput').value = '';
+            document.getElementById('genderSelect').value = '';
+            document.getElementById('yearSelect').value = '';
+            document.getElementById('monthSelect').value = '';
+            document.getElementById('regionSelect').value = '';
+            document.getElementById('jobSelect').value = '';
+            
+            window.currentImageData = null;
+            window.currentPartnerResult = null;
+            window.currentUserInfo = null;
+            
+            checkAnalyzeButton();
+        }
+
+        function saveResult() {
+            if (!window.currentPartnerResult) {
+                alert('저장할 결과가 없습니다!');
+                return;
+            }
+            
+            const resultData = {
+                partner: window.currentPartnerResult,
+                userInfo: window.currentUserInfo,
+                timestamp: new Date().toISOString(),
+                url: window.location.href
+            };
+            
+            try {
+                localStorage.setItem('marriageTestResult', JSON.stringify(resultData));
+                alert('결과가 저장되었습니다! 💾\n\n언제든 다시 확인할 수 있어요.');
+            } catch (e) {
+                alert('결과 저장에 실패했습니다. 스크린샷으로 저장해보세요! 📷');
+            }
+        }
+
+        function scrollToUpload() {
+            document.querySelector('.upload-section').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            initSelectors();
+        });
+    </script>
+</body>
 </html>
